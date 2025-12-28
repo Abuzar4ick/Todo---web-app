@@ -1,69 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>✨ Full-Stack Todo App with Auth & Zustand ✨</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fafb;
-      color: #111827;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: linear-gradient(90deg, #6366f1, #4f46e5);
-      color: white;
-      padding: 25px 0;
-      text-align: center;
-      font-size: 1.8rem;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #1e293b;
-      margin-top: 40px;
-      border-bottom: 2px solid #4f46e5;
-      padding-bottom: 6px;
-    }
-    ul {
-      list-style: disc;
-      margin-left: 20px;
-    }
-    pre {
-      background-color: #e0e7ff;
-      padding: 10px;
-      border-radius: 6px;
-      overflow-x: auto;
-    }
-    a {
-      color: #4f46e5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 50px;
-      color: #64748b;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ Full-Stack Todo App Portfolio ✨</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-<header>✨ Full-Stack Todo App with Auth & Zustand ✨</header>
+<header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-8 text-center text-2xl font-bold shadow-lg">
+  ✨ Full-Stack Todo App with Auth & Zustand ✨
+</header>
 
-<div class="container">
-  <section>
-    <h2>Highlights:</h2>
-    <ul>
+<main class="container mx-auto p-6">
+  <section class="my-8">
+    <h2 class="text-xl font-semibold border-b-2 border-indigo-600 pb-2 mb-4">Highlights</h2>
+    <ul class="list-disc ml-6 space-y-2">
       <li>🔐 Custom JWT Authentication (no 3rd-party auth)</li>
       <li>⚡ Full CRUD Todo Functionality</li>
       <li>🟢 User-specific Task Management</li>
@@ -76,9 +28,9 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Backend (.env Setup)</h2>
-    <pre>
+  <section class="my-8">
+    <h2 class="text-xl font-semibold border-b-2 border-indigo-600 pb-2 mb-4">Backend (.env Setup)</h2>
+    <pre class="bg-indigo-100 p-4 rounded-lg overflow-x-auto">
 PORT=3000
 MONGO_URI=your_mongo_uri_here
 NODE_ENV=development
@@ -87,27 +39,24 @@ CLIENT_URL=http://localhost:5173
     </pre>
   </section>
 
-  <section>
-    <h2>🔧 Run the Backend</h2>
-    <pre>
-cd backend
+  <section class="my-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h2 class="text-lg font-semibold mb-3">🔧 Run the Backend</h2>
+      <pre>cd backend
 npm install
-npm run dev
-    </pre>
+npm run dev</pre>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h2 class="text-lg font-semibold mb-3">💻 Run the Frontend</h2>
+      <pre>cd frontend
+npm install
+npm run dev</pre>
+    </div>
   </section>
 
-  <section>
-    <h2>💻 Run the Frontend</h2>
-    <pre>
-cd frontend
-npm install
-npm run dev
-    </pre>
-  </section>
-
-  <section>
-    <h2>Next Steps / Ideas:</h2>
-    <ul>
+  <section class="my-8">
+    <h2 class="text-xl font-semibold border-b-2 border-indigo-600 pb-2 mb-4">Next Steps / Ideas</h2>
+    <ul class="list-disc ml-6 space-y-2">
       <li>🟢 Filter & Search for Tasks</li>
       <li>🟢 Pagination</li>
       <li>🟢 Dark Mode Toggle</li>
@@ -115,9 +64,11 @@ npm run dev
       <li>🟢 Deploy full-stack app with free-tier services</li>
     </ul>
   </section>
-</div>
+</main>
 
-<footer>&copy; 2025 Full-Stack Todo App | Developed by Abuzar</footer>
+<footer class="text-center py-6 text-gray-500">
+  &copy; 2025 Full-Stack Todo App | Developed by Abuzar
+</footer>
 
 </body>
 </html>
