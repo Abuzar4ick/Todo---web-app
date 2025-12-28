@@ -1,0 +1,75 @@
+import { create } from "zustand";
+import { axiosInstance } from "../lib/axios";
+import toast from "react-hot-toast";
+
+export const useAuthStore = create((set, get) => ({
+  authUser: null,
+  isSigningUp: false,
+  isSigningIn: false,
+  isCheckingAuth: false,
+
+  checkAuth: async () => {
+    set({ isCheckingAuth: true });
+
+    try {
+      const res = await axiosInstance.get("/auth/check");
+      set({ authUser: res.data });
+    } catch (error) {
+      console.log("Error in authCheck:", error);
+      set({ authUser: null });
+    } finally {
+      set({ isCheckingAuth: false });
+    }
+  },
+
+  signup: async (data) => {
+    set({ isSigningUp: true });
+    try {
+      const res = await axiosInstance.post("/auth/signup", data);
+      set({ authUser: res.data });
+
+      toast.success("Account created successfully!");
+    } catch (error) {
+      const errs = error.response?.data?.errors;
+      if (errs) {
+        const firstError = Object.values(errs)[0][0];
+        toast.error(firstError);
+      } else {
+        toast.error(error.response.data.message);
+      }
+    } finally {
+      set({ isSigningUp: false });
+    }
+  },
+
+  login: async (data) => {
+    set({ isSigningIn: true });
+    try {
+      const res = await axiosInstance.post("/auth/login", data);
+      set({ authUser: res.data });
+
+      toast.success("Signed in successfully");
+    } catch (error) {
+      const errs = error.response?.data?.errors;
+      if (errs) {
+        const firstError = Object.values(errs)[0][0];
+        toast.error(firstError);
+      } else {
+        toast.error(error.response.data.message);
+      }
+    } finally {
+      set({ isSigningIn: false });
+    }
+  },
+
+  logout: async () => {
+    try {
+      await axiosInstance.post("/auth/logout");
+      set({ authUser: null });
+      toast.success("Logged out successfully");
+    } catch (error) {
+      toast.error("Error logging out");
+      console.log("Logout error:", error);
+    }
+  },
+}));
