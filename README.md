@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>✨ Full-Stack Todo App Portfolio ✨</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50 text-gray-800">
-
-<header class="bg-linear-to-r from-purple-600 to-indigo-600 text-white py-8 text-center text-2xl font-bold shadow-lg">
-  ✨ Full-Stack Todo App with Auth & Zustand ✨
-</header>
+<h1 align="center">✨ Full-Stack Chat App with Auth & Emails ✨</h1>
 
 <main class="container mx-auto p-6">
   <section class="my-8">
@@ -56,6 +44,3 @@ npm run dev</pre>
 <footer class="text-center py-6 text-gray-500">
   &copy; 2025 Full-Stack Todo App | Developed by Abuzar
 </footer>
-
-</body>
-</html>
