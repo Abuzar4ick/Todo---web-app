@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-8 text-center text-2xl font-bold shadow-lg">
+<header class="bg-linear-to-r from-purple-600 to-indigo-600 text-white py-8 text-center text-2xl font-bold shadow-lg">
   ✨ Full-Stack Todo App with Auth & Zustand ✨
 </header>
 
@@ -16,15 +16,13 @@
   <section class="my-8">
     <h2 class="text-xl font-semibold border-b-2 border-indigo-600 pb-2 mb-4">Highlights</h2>
     <ul class="list-disc ml-6 space-y-2">
-      <li>🔐 Custom JWT Authentication (no 3rd-party auth)</li>
+      <li>🔐 Custom JWT Authentication</li>
       <li>⚡ Full CRUD Todo Functionality</li>
       <li>🟢 User-specific Task Management</li>
-      <li>📨 Welcome Emails on Signup (if implemented)</li>
       <li>🧰 REST API with Node.js & Express</li>
-      <li>🧱 PostgreSQL / SQLite / MongoDB for Data Persistence</li>
+      <li>🧱 MongoDB for Data Persistence</li>
       <li>🎨 Beautiful UI with React, Tailwind CSS & Zustand</li>
-      <li>🧑‍💻 Git & GitHub Workflow (branches, PRs, merges)</li>
-      <li>🚀 Easy Deployment (Vercel + Render free-tier friendly)</li>
+      <li>🚀 Easy Deployment (Sevalla free-tier friendly)</li>
     </ul>
   </section>
 
@@ -52,17 +50,6 @@ npm run dev</pre>
 npm install
 npm run dev</pre>
     </div>
-  </section>
-
-  <section class="my-8">
-    <h2 class="text-xl font-semibold border-b-2 border-indigo-600 pb-2 mb-4">Next Steps / Ideas</h2>
-    <ul class="list-disc ml-6 space-y-2">
-      <li>🟢 Filter & Search for Tasks</li>
-      <li>🟢 Pagination</li>
-      <li>🟢 Dark Mode Toggle</li>
-      <li>🟢 Role-based Access (Admin/User)</li>
-      <li>🟢 Deploy full-stack app with free-tier services</li>
-    </ul>
   </section>
 </main>
 
