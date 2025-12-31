@@ -1,4 +1,4 @@
-<h1 align="center">✨ Full-Stack Chat App with Auth & Emails ✨</h1>
+<h1 align="center">✨ Full-Stack Todo Web App with Auth & Emails ✨</h1>
 
 <main class="container mx-auto p-6">
   <section class="my-8">
